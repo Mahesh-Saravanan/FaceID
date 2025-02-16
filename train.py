@@ -7,6 +7,13 @@ from utils import load_model
 from config import Config
 config = Config()
 
+"""
+import kagglehub
+
+path = kagglehub.dataset_download("ashwingupta3012/human-faces")
+config.data_dir = path
+
+"""
 def train_epoch(model, dataloader, criterion, optimizer, device, epoch,num_epoch):
     model.train()
     epoch_loss_bin = []
