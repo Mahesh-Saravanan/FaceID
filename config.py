@@ -17,8 +17,8 @@ class Config:
     image_path = "/Users/maheshsaravanan/Desktop/FaceID/TestFolder/test1.jpg"
 
     Load_model = True
-    Encoder_path = "./checkpoints/encoder_at_Epoch5.pth"
-    Decoder_path = "./checkpoints/decoder_at_Epoch5.pth"
+    Encoder_path = "./checkpoints/encoder_at_Epoch15.pth"
+    Decoder_path = "./checkpoints/decoder_at_Epoch15.pth"
    
     split_ratios = (0.85, 0.10, 0.05)
     device ="mps" if torch.backends.mps.is_available() else "cpu"

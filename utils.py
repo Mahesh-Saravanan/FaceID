@@ -10,8 +10,9 @@ def weights_init_normal(m):
             nn.init.constant_(m.bias.data, 0)
 
 def load_model(model):  
-    model.encoder.load_state_dict(torch.load(config.Encoder_path))
-    model.decoder.load_state_dict(torch.load(config.Decoder_path))
-    print("Model weights loaded...")
+    model.encoder.load_state_dict(torch.load(config.Encoder_path,map_location=torch.device('cpu')))
+    model.decoder.load_state_dict(torch.load(config.Decoder_path,map_location=torch.device('cpu')))
+    
+    print(f"Model weights loaded...")
     return model
     
