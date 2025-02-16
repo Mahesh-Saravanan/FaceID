@@ -16,6 +16,7 @@ class Config:
     SaveInterval = 2
     image_path = "/Users/maheshsaravanan/Desktop/FaceID/TestFolder/test1.jpg"
 
+    Load_model = True
     Encoder_path = "./checkpoints/encoder_at_Epoch5.pth"
     Decoder_path = "./checkpoints/decoder_at_Epoch5.pth"
    

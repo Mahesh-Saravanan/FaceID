@@ -94,14 +94,14 @@ def train(model, train_loader, val_loader, criterion, optimizer, device, num_epo
     os.makedirs( save_path, exist_ok=True) 
 
     print(f"training on {device}")
-    
+    if config.Load_model: model = load_model(model)
     
     for epoch in range(num_epochs):
         train_loss,e_bin = train_epoch(model, train_loader, criterion, optimizer, device,epoch,num_epochs)
         
         val_loss = evaluate(model, val_loader, criterion, device)
         
-        print(f"Epoch [{epoch+1}/{num_epochs}], Train Loss: {train_loss:.4f}, Val Loss: {val_loss:.4f}")
+        print(f"\nEpoch [{epoch+1}/{num_epochs}], Train Loss: {train_loss:.4f}, Val Loss: {val_loss:.4f}")
         loss_bin= loss_bin+e_bin
         
         if config.SaveInterval%(epoch+1):
