@@ -6,7 +6,7 @@ class Config:
     data_dir = "/Users/maheshsaravanan/Desktop/FaceID/DS"
 
     
-    image_size = 512         
+    image_size = 512    #     
     batch_size = 16
     num_epochs = 50
     learning_rate = 1e-3
